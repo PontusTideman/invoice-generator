@@ -50,5 +50,10 @@ export const YourDetailsForm = () => (
       placeholder="GSTIN 1234"
       variableName="yourTaxId"
     />
+    <CustomTextInput
+      label="VATIN"
+      placeholder="SEXXXXXXXXXX01"
+      variableName="yourVATin"
+    />
   </div>
 );

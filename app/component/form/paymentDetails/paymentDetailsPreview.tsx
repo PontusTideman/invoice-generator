@@ -7,6 +7,9 @@ export const PaymentDetailsPreview: React.FC<
   bankName,
   accountNumber,
   accountName,
+  swishNumber,
+  plusGiro,
+  bankGiro,
   routingCode,
   swiftCode,
   ifscCode,
@@ -60,7 +63,8 @@ export const PaymentDetailsPreview: React.FC<
               <div className="rounded-[3.5px] bg-neutral-100 h-4 w-full animate-pulse" />
             )}
           </div>
-          <div className="mb-2 grid grid-cols-2 items-center">
+
+{/*           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
               Account Name
             </p>
@@ -71,8 +75,92 @@ export const PaymentDetailsPreview: React.FC<
             ) : (
               <div className="rounded-[3.5px] bg-neutral-100 h-4 w-full animate-pulse" />
             )}
-          </div>
-          <div className="mb-2 grid grid-cols-2 items-center">
+          </div> */}
+
+
+          {accountName && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Account Name
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {accountName}
+              </p>
+            </div>
+          )}
+
+
+{/*           <div className="mb-2 grid grid-cols-2 items-center">
+            <p className="truncate text-xs font-medium text-gray-500">
+              Swish
+            </p>
+            {swishNumber ? (
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {swishNumber}
+              </p>
+            ) : (
+              <div className="rounded-[3.5px] bg-neutral-100 h-4 w-full animate-pulse" />
+            )}
+          </div> */}
+
+          {swishNumber && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Swish
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {swishNumber}
+              </p>
+            </div>
+          )}
+
+          {plusGiro && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Plusgiro
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {plusGiro}
+              </p>
+            </div>
+          )}
+
+
+          {bankGiro && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Bankgiro
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {bankGiro}
+              </p>
+            </div>
+          )}
+
+{/*           {swiftCode && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Swift Code
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {swiftCode}
+              </p>
+            </div>
+          )}
+
+          {swiftCode && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Swift Code
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {swiftCode}
+              </p>
+            </div>
+          )} */}
+
+
+{/*           <div className="mb-2 grid grid-cols-2 items-center">
             <p className="truncate text-xs font-medium text-gray-500">
               Swift Code
             </p>
@@ -83,7 +171,22 @@ export const PaymentDetailsPreview: React.FC<
             ) : (
               <div className="rounded-[3.5px] bg-neutral-100 h-4 w-full animate-pulse" />
             )}
-          </div>
+          </div> */}
+
+
+          {swiftCode && (
+            <div className="mb-2 grid grid-cols-2 items-center">
+              <p className="truncate text-xs font-medium text-gray-500">
+                Swift Code
+              </p>
+              <p className="flex truncate text-xs font-medium text-gray-600">
+                {swiftCode}
+              </p>
+            </div>
+          )}
+
+
+
           {routingCode && (
             <div className="mb-2 grid grid-cols-2 items-center">
               <p className="truncate text-xs font-medium text-gray-500">
@@ -94,6 +197,8 @@ export const PaymentDetailsPreview: React.FC<
               </p>
             </div>
           )}
+
+
           {ifscCode && (
             <div className="mb-2 grid grid-cols-2 items-center">
               <p className="truncate text-xs font-medium text-gray-500">
@@ -104,9 +209,11 @@ export const PaymentDetailsPreview: React.FC<
               </p>
             </div>
           )}
+
+
         </div>
       </div>
-      <div className="py-4 px-10">
+{/*       <div className="py-4 px-10">
         <p className="text-[11px] text-neutral-400 font-medium uppercase mb-3">
           Payable in
         </p>
@@ -126,7 +233,7 @@ export const PaymentDetailsPreview: React.FC<
             </div>
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };

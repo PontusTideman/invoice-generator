@@ -34,5 +34,20 @@ export const PaymentDetailsForm = () => (
       placeholder="HSBCINAA123"
       variableName="swiftCode"
     />
+    <CustomNumberInput
+      label="Swish"
+      placeholder="1231231231"
+      variableName="swishNumber"
+    />
+    <CustomTextInput
+      label="Plusgiro"
+      placeholder="1231231231"
+      variableName="plusGiro"
+    />
+    <CustomTextInput
+      label="Bankgiro"
+      placeholder="1231231231"
+      variableName="bankGiro"
+    />
   </div>
 );

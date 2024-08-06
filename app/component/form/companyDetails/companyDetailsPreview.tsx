@@ -12,6 +12,7 @@ export const CompanyDetailsPreview: React.FC<CompanyDetails> = ({
   companyCountry,
   companyLogo,
   companyTaxId,
+  companyVATin,
   companyZip,
 }) => (
   <div>
@@ -43,7 +44,7 @@ export const CompanyDetailsPreview: React.FC<CompanyDetails> = ({
       )}
       {companyAddress || companyState || companyZip ? (
         <p className="mb-0.5">
-          {companyCity}, {companyState} {companyZip}
+          {companyZip} {companyState} {companyCity}
         </p>
       ) : (
         <div className="rounded-md bg-neutral-100 h-4 w-4/6 animate-pulse my-3" />
@@ -54,6 +55,7 @@ export const CompanyDetailsPreview: React.FC<CompanyDetails> = ({
         <div className="rounded-md bg-neutral-100 h-4 w-3/6 animate-pulse my-2" />
       )}
       {companyTaxId && <p>Tax ID:{companyTaxId}</p>}
+      {companyVATin && <p>Tax ID:{companyVATin}</p>}
     </div>
   </div>
 );

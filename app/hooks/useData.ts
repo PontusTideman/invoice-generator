@@ -9,6 +9,7 @@ export const useData = () => {
   const yourCountry = useGetValue("yourCountry");
   const yourLogo = useGetValue("yourLogo");
   const yourTaxId = useGetValue("yourTaxId");
+  const yourVATin = useGetValue("yourVATin");
   const yourZip = useGetValue("yourZip");
 
   const email = useGetValue("email");
@@ -19,6 +20,7 @@ export const useData = () => {
   const companyCountry = useGetValue("companyCountry");
   const companyLogo = useGetValue("companyLogo");
   const companyTaxId = useGetValue("companyTaxId");
+  const companyVATin = useGetValue("companyVATin");
   const companyZip = useGetValue("companyZip");
 
   const note = useGetValue("note");
@@ -29,6 +31,9 @@ export const useData = () => {
   const bankName = useGetValue("bankName");
   const accountNumber = useGetValue("accountNumber");
   const accountName = useGetValue("accountName");
+  const swishNumber = useGetValue("swishNumber");
+  const plusGiro = useGetValue("plusGiro");
+  const bankGiro = useGetValue("bankGiro");
   const routingCode = useGetValue("routingCode");
   const swiftCode = useGetValue("swiftCode");
   const ifscCode = useGetValue("ifscCode");
@@ -57,6 +62,9 @@ export const useData = () => {
     bankName: bankName,
     accountNumber: accountNumber,
     accountName: accountName,
+    swishNumber: swishNumber,
+    plusGiro: plusGiro,
+    bankGiro: bankGiro,
     routingCode: routingCode,
     swiftCode: swiftCode,
     ifscCode: ifscCode,
@@ -72,6 +80,7 @@ export const useData = () => {
     yourLogo,
     yourEmail,
     yourTaxId,
+    yourVATin,
     yourZip,
   };
 
@@ -83,6 +92,7 @@ export const useData = () => {
     companyCountry,
     companyLogo,
     companyTaxId,
+    companyVATin,
     companyZip,
     email,
   };

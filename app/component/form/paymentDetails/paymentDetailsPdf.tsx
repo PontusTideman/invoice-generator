@@ -12,6 +12,9 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
   bankName,
   accountNumber,
   accountName,
+  swishNumber,
+  bankGiro,
+  plusGiro,
   routingCode,
   swiftCode,
   ifscCode,
@@ -67,7 +70,9 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
               {accountNumber ? accountNumber : "-"}
             </Text>
           </View>
-          <View style={pdfUtils.flexRowItemCenter}>
+          
+          
+{/*           <View style={pdfUtils.flexRowItemCenter}>
             <Text style={pdfTypography.paymentTitle}>Account Name</Text>
             <Text
               style={{
@@ -78,8 +83,99 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             >
               {accountName ? accountName : "-"}
             </Text>
-          </View>
+          </View> */}
+
+          {accountName ? (
+            <View style={pdfUtils.flexRowItemCenter}>
+              <Text style={pdfTypography.paymentTitle}>Account Name</Text>
+              <Text
+                style={{
+                  flex: 1,
+                  ...pdfTypography.itemDescription,
+                  paddingLeft: 26,
+                }}
+              >
+                {accountName}
+              </Text>
+            </View>
+          ) : undefined}
+
+
           <View style={pdfUtils.flexRowItemCenter}>
+            <Text style={pdfTypography.paymentTitle}>Swish</Text>
+            <Text
+              style={{
+                flex: 1,
+                ...pdfTypography.itemDescription,
+                paddingLeft: 75,
+              }}
+            >
+              {swishNumber ? swishNumber : "-"}
+            </Text>
+          </View>
+
+{/*           <View style={pdfUtils.flexRowItemCenter}>
+            <Text style={pdfTypography.paymentTitle}>Plusgiro</Text>
+            <Text
+              style={{
+                flex: 1,
+                ...pdfTypography.itemDescription,
+                paddingLeft: 26,
+              }}
+            >
+              {plusGiro ? plusGiro : "-"}
+            </Text>
+          </View> */}
+
+          {plusGiro ? (
+            <View style={pdfUtils.flexRowItemCenter}>
+              <Text style={pdfTypography.paymentTitle}>Plusgiro</Text>
+              <Text
+                style={{
+                  flex: 1,
+                  ...pdfTypography.itemDescription,
+                  paddingLeft: 63,
+                }}
+              >
+                {plusGiro}
+              </Text>
+            </View>
+          ) : undefined}
+
+{/*           <View style={pdfUtils.flexRowItemCenter}>
+            <Text style={pdfTypography.paymentTitle}>Bankgiro</Text>
+            <Text
+              style={{
+                flex: 1,
+                ...pdfTypography.itemDescription,
+                paddingLeft: 26,
+              }}
+            >
+              {bankGiro ? bankGiro : "-"}
+            </Text>
+          </View> */}
+
+          {bankGiro ? (
+            <View style={pdfUtils.flexRowItemCenter}>
+              <Text style={pdfTypography.paymentTitle}>Bankgiro</Text>
+              <Text
+                style={{
+                  flex: 1,
+                  ...pdfTypography.itemDescription,
+                  paddingLeft: 59,
+                }}
+              >
+                {bankGiro}
+              </Text>
+            </View>
+          ) : undefined}
+
+
+
+
+
+
+{/*           <View style={pdfUtils.flexRowItemCenter}>
             <Text style={pdfTypography.paymentTitle}>Swift Code</Text>
             <Text
               style={{
@@ -90,7 +186,26 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             >
               {swiftCode ? swiftCode : "-"}
             </Text>
-          </View>
+          </View> */}
+
+          {swiftCode ? (
+            <View style={pdfUtils.flexRowItemCenter}>
+              <Text style={pdfTypography.paymentTitle}>swiftCode</Text>
+              <Text
+                style={{
+                  flex: 1,
+                  ...pdfTypography.itemDescription,
+                  paddingLeft: 45,
+                }}
+              >
+                {swiftCode}
+              </Text>
+            </View>
+          ) : undefined}
+
+
+
+
           {ifscCode ? (
             <View style={pdfUtils.flexRowItemCenter}>
               <Text style={pdfTypography.paymentTitle}>IFSC Code</Text>
@@ -105,6 +220,8 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
               </Text>
             </View>
           ) : undefined}
+          
+          
           {routingCode ? (
             <View style={pdfUtils.flexRowItemCenter}>
               <Text style={pdfTypography.paymentTitle}>Routing Code</Text>
@@ -119,9 +236,10 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
               </Text>
             </View>
           ) : undefined}
+
         </View>
       </View>
-      <View
+{/*       <View
         style={{
           flex: 1,
           paddingLeft: 40,
@@ -156,7 +274,7 @@ export const PaymentDetailsPdf: React.FC<PaymentDetailsPdfProps> = ({
             </View>
           </View>
         )}
-      </View>
+      </View> */}
     </View>
   );
 };

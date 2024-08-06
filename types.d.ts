@@ -7,6 +7,7 @@ interface CompanyDetails {
   companyCountry?: string | null;
   companyLogo?: string | null;
   companyTaxId?: string | null;
+  companyVATin?: string | null;
   companyZip?: string | null;
 }
 
@@ -19,6 +20,7 @@ interface YourDetails {
   yourCountry?: string | null;
   yourLogo?: string | null;
   yourTaxId?: string | null;
+  yourVATin?: string | null;
   yourZip?: string | null;
 }
 
@@ -46,6 +48,9 @@ interface PaymentDetails {
   bankName?: string | null;
   accountNumber?: string | null;
   accountName?: string | null;
+  swishNumber?: string | null;
+  plusGiro?: string | null;
+  bankGiro?: string | null;
   routingCode?: string | null;
   swiftCode?: string | null;
   ifscCode?: string | null;

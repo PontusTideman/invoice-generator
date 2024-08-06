@@ -13,6 +13,7 @@ import {
   KZ,
   TW,
   GB,
+  SE,
   FlagComponent,
   ID,
 } from "country-flag-icons/react/1x1";
@@ -207,6 +208,18 @@ export const currencyList: {
       currencyShortForm: "IDR",
       icon: ID,
       iconName: "ID",
+    },
+  },
+  {
+    value: "SEK",
+    label: "SEK",
+    details: {
+      country: "Sweden",
+      currencySymbol: "kr",
+      currencyName: "Swedish Krona",
+      currencyShortForm: "SEK",
+      icon: SE,
+      iconName: "SE",
     },
   },
 ];
